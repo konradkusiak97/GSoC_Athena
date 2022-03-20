@@ -65,9 +65,9 @@ Result of matrix multiplication using DPC++: Success - The results are correct!
 
 ## Exercise 2
 
-Since I have local access only to AMD Ryzen cpu and NVIDIA graphics card, I will compare running the code on those two, using an open source llvm compiler for NVIDIA card.
+Since I have a local access only to an AMD Ryzen cpu and a NVIDIA graphics card, I will compare running the code on those two, using Intel's open source llvm compiler for NVIDIA card.
 
- - Matrix multiplication with `m_size= 1500 * 8` using `cpu_selector{}`:
+ - Matrix multiplication with `m_size = 1500 * 8` using `cpu_selector{}`:
 
  ```
 [konradd-Flow@fedora matrix_mul]$ multitime ./matrix_mul_dpc
