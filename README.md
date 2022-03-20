@@ -65,7 +65,7 @@ Result of matrix multiplication using DPC++: Success - The results are correct!
 
 ## Exercise 2
 
-Since I have a local access only to an AMD Ryzen cpu and a NVIDIA graphics card, I will compare running the code on those two, using Intel's open source [llvm compiler](https://github.com/intel/llvm) for NVIDIA card.
+Since I have a local access only to an `AMD Ryzen cpu` and a `NVIDIA graphics card`, I will compare running the code on those two, using Intel's open source [llvm compiler](https://github.com/intel/llvm) for the `NVIDIA card`.
 
  - Matrix multiplication with `m_size = 1500 * 8` using `cpu_selector{}`:
 
@@ -113,7 +113,7 @@ I did the Vtune profiling by running the bilinear quadratic form implementation 
 - gpu hotspots
 - cpu hotspots.
 
-The device that the code was run on, was Intel HD Graphics P630
+The device that the code was run on, was `Intel HD Graphics P630`.
 ![](Images/gpu_preview.png)
 
 From the `cpu hotspots` it can be seen that the cpu implementation of the algorithm takes a fraction of time of the device's kernel execution. This could be due to the current size of the problem. Moreover, apart from the kernel execution itself, the memory copying also takes some time (the results back to the host):
@@ -123,5 +123,7 @@ When we look at the specific `gpu hotspots` analysis, it seems that the kernel i
 - looking at the memory allocations and possibly switching to explicitly moving the memory to the device,
 - inspecting the sizes of work groups and checking if higher ones could improve the performance
 - checking if GPU's performance will dominate over the CPU with higher problem size.
+
+![](Images/gpu_hotspots.png)
 
 
